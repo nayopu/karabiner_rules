@@ -67,9 +67,6 @@
             "modifiers": {
               "mandatory": [
                 "control"
-              ],
-              "optional": [
-                "caps_lock"
               ]
             }
           },
@@ -326,21 +323,291 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "caps_lock"
-          },
-          "to": [
-            {
-              "key_code": "left_command"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": [
-                "com.microsoft.rdc.macos"
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": [
+                "any"
               ]
             }
-          ]
+          },
+          "to":
+          {
+            "key_code": "left_command"
+          }
+        }
+      ]
+    },
+    {
+      "description": "Spercial functions only when single press",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f1"
+          },
+          "to":  {
+            "key_code": "display_brightness_decrement"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f2"
+          },
+          "to":  {
+            "key_code": "display_brightness_increment"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f3"
+          },
+          "to":  {
+            "key_code": "mission_control"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f4"
+          },
+          "to":  {
+            "key_code": "launchpad"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f5"
+          },
+          "to":  {
+            "key_code": "illumination_decrement"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f6"
+          },
+          "to":  {
+            "key_code": "illumination_increment"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f7"
+          },
+          "to":  {
+            "key_code": "rewind"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f8"
+          },
+          "to":  {
+            "key_code": "play_or_pause"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f9"
+          },
+          "to":  {
+            "key_code": "fastforward"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f10"
+          },
+          "to":  {
+            "key_code": "mute"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f11"
+          },
+          "to":  {
+            "key_code": "volume_decrement"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f12"
+          },
+          "to":  {
+            "key_code": "volume_increment"
+          }
+        }
+      ]
+    },
+    {
+      "description": "Cmd + # -> fn #",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "1",
+            "modifiers": {
+              "mandatory": ["left_command"],
+              "optional": ["any"]
+            }
+          },
+          "to": {
+            "key_code": "f1"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "2",
+            "modifiers": {
+              "mandatory": ["left_command"],
+              "optional": ["any"]
+            }
+          },
+          "to":  {
+            "key_code": "f2"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "3",
+            "modifiers": {
+              "mandatory": ["left_command"],
+              "optional": ["any"]
+            }
+          },
+          "to":  {
+            "key_code": "f3"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "4",
+            "modifiers": {
+              "mandatory": ["left_command"],
+              "optional": ["any"]
+            }
+          },
+          "to":  {
+            "key_code": "f4"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "5",
+            "modifiers": {
+              "mandatory": ["left_command"],
+              "optional": ["any"]
+            }
+          },
+          "to":  {
+            "key_code": "f5"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "6",
+            "modifiers": {
+              "mandatory": ["left_command"],
+              "optional": ["any"]
+            }
+          },
+          "to":  {
+            "key_code": "f6"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "7",
+            "modifiers": {
+              "mandatory": ["left_command"],
+              "optional": ["any"]
+            }
+          },
+          "to":  {
+            "key_code": "f7"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "8",
+            "modifiers": {
+              "mandatory": ["left_command"],
+              "optional": ["any"]
+            }
+          },
+          "to":  {
+            "key_code": "f8"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "9",
+            "modifiers": {
+              "mandatory": ["left_command"],
+              "optional": ["any"]
+            }
+          },
+          "to":  {
+            "key_code": "f9"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "0",
+            "modifiers": {
+              "mandatory": ["left_command"],
+              "optional": ["any"]
+            }
+          },
+          "to":  {
+            "key_code": "f10"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "hyphen",
+            "modifiers": {
+              "mandatory": ["left_command"],
+              "optional": ["any"]
+            }
+          },
+          "to":  {
+            "key_code": "f11"
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "equal_sign",
+            "modifiers": {
+              "mandatory": ["left_command"],
+              "optional": ["any"]
+            }
+          },
+          "to":  {
+            "key_code": "f12"
+          }
         }
       ]
     },
@@ -350,7 +617,12 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "left_control"
+            "key_code": "left_control",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -361,7 +633,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.microsoft.rdc.macos"
+                "com.parallels.desktop.console",
+                "com.microsoft.rdc.osx.beta"
               ]
             }
           ]
@@ -369,7 +642,12 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "caps_lock"
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -380,7 +658,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.microsoft.rdc.macos"
+                "com.parallels.desktop.console",
+                "com.microsoft.rdc.osx.beta"
               ]
             }
           ]
@@ -388,7 +667,12 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "left_command"
+            "key_code": "left_command",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -399,7 +683,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.microsoft.rdc.macos"
+                "com.parallels.desktop.console",
+                "com.microsoft.rdc.osx.beta"
               ]
             }
           ]
@@ -407,7 +692,12 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "left_option"
+            "key_code": "left_option",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -418,7 +708,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.microsoft.rdc.macos"
+                "com.parallels.desktop.console",
+                "com.microsoft.rdc.osx.beta"
               ]
             }
           ]
